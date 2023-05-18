@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taask 6</title>
+</head>
+<body>
+    <h1>Class - Movie</h1>
+    <script>
+    class Movie {
+        constructor(title, studio, ratings){
+            this.title = title;
+            this.studio = studio;
+            this.ratings = ratings;
+        }
+    }
+    let details1 = new Movie("lionking","universal production", "5");
+    console.log(details1);
+    </script>
+</body>
+</html>

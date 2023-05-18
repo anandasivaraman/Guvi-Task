@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 4</title>
+</head>
+<body>
+    <h1>task 4</h1>
+
+        <script>
+            function handleData()
+  {  
+      console.log("Flags of all Countries")
+      let data = JSON.parse(this.responseText)
+      console.log(data)
+
+      for(let i=0;i<data.length;i++)
+      {
+          console.log(data[i].flags);
+      }
+
+        or
+
+      for(e in data)
+      {
+          console.log(data[e].flags);
+      }
+
+      or
+
+    for(e of data)
+    {
+        console.log(e.flags);
+    
+    }
+
+      console.log("Name, region, subregion, population of all countries")
+
+      for(let i=0;i<data.length;i++)
+     {
+         console.log(data[i].name, data[i].region, data[i].subregion, data[i].population);
+     }
+
+       or
+
+     for(i in data)
+     {
+         console.log(data[i].name, data[i].region, data[i].subregion, data[i].population);
+     }
+
+       or
+
+      for(e of data)
+      {
+          console.log(e.name, e.region, e.subregion, e.population);
+      }
+      
+
+
+  }
+      const req = new XMLHttpRequest();
+  req.addEventListener('load',handleData)
+   req.onload = (res)=>{
+       console.log(JSON.parse(res.srcElement.responseText))
+    }
+  req.open("GET","https://restcountries.com/v3.1/all")
+  req.send()
+        </script>
+</body>
+</html>
